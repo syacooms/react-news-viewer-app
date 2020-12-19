@@ -6,22 +6,25 @@ const NewsItemBlock = styled.div`
 
   .thumbnail {
     margin-right: 1rem;
-    img {
-      display: block;
-      width: 160px;
-      height: 100px;
-      object-fit: cover;
-    }
   }
+  .img {
+    display: block;
+    width: 160px;
+    height: 100px;
+    object-fit: cover;
+  }
+
   .contents {
     h2 {
       margin: 0;
+      margin-left: 5px;
       a {
         color: black;
       }
     }
     p {
       margin: 0;
+      margin-left: 5px;
       line-height: 1.5;
       margin-top: 0.5rem;
       white-space: normal;
@@ -40,7 +43,7 @@ function NewsItem({ article }) {
       {urlToImage && (
         <div className="thumnail">
           <a href={url} target="_blank" rel="noopener noreferrer">
-            <img src={urlToImage} alt="thumbnail" />
+            <img className="img" src={urlToImage} alt="thumbnail" />
           </a>
         </div>
       )}
